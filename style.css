@@ -1,7 +1,9 @@
 
 body {
+    background-color:wheat;
             text-align: center;
             margin: 50px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         label {
@@ -11,8 +13,18 @@ body {
 
         input {
             margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         button {
             margin-top: 10px;
+            background-color: steelblue;
+            padding: 10px 40px 10px;
+            border-radius: 5px;
+            color:white;
+        }
+        #resultRupees{
+          font-weight: bold;
+          color: green;
         }

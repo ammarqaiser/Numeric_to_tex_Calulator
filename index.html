@@ -7,6 +7,7 @@
     <title>Dollar to Rupee Converter</title>
     <script>
         function convertDollarsToRupees() {
+           
             const dollarsValue = parseFloat(document.getElementById('dollarsValue').value);
             const exchangeRate = parseFloat(document.getElementById('exchangeRate').value) || 278;
 
@@ -17,6 +18,8 @@
             } else {
                 alert('Please enter a valid numerical value for dollars.');
             }
+
+           
         }
 
         function numberToWordsRupees(number) {
@@ -90,10 +93,7 @@
         }
 
         function convertLargeNumbers(num, scaleName) {
-            // The existing JavaScript code for large number conversion
-            // ...
 
-            // Example usage:
             let result = '';
             let scaleIndex = 0;
 
@@ -107,7 +107,17 @@
             }
 
             return result.trim();
+
+            
         }
+
+        function clearInputFields() {
+            document.getElementById('dollarsValue').value = '';
+            document.getElementById('exchangeRate').value = '';
+            document.getElementById('resultRupees').textContent = '';
+        }
+ 
+        
     </script>
 </head>
 <body>
@@ -119,6 +129,7 @@
     <input  type="number" id="exchangeRate" step="0.01" placeholder="Enter rate" />
     <br>
     <button onclick="convertDollarsToRupees()">Convert</button>
+    <button onclick="clearInputFields()">Clear</button>
     <p id="resultRupees"></p>
 </body>
 </html>
